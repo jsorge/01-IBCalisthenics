@@ -18,6 +18,7 @@
 		93C741D717FBA61C007DE151 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93C741B617FBA61C007DE151 /* Cocoa.framework */; };
 		93C741DF17FBA61C007DE151 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 93C741DD17FBA61C007DE151 /* InfoPlist.strings */; };
 		93C741E117FBA61C007DE151 /* IB_CalisthenicsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C741E017FBA61C007DE151 /* IB_CalisthenicsTests.m */; };
+		93C741EC17FBA64F007DE151 /* JMSMainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 93C741EB17FBA64F007DE151 /* JMSMainWindow.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		93C741DC17FBA61C007DE151 /* IB CalisthenicsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IB CalisthenicsTests-Info.plist"; sourceTree = "<group>"; };
 		93C741DE17FBA61C007DE151 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		93C741E017FBA61C007DE151 /* IB_CalisthenicsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IB_CalisthenicsTests.m; sourceTree = "<group>"; };
+		93C741EA17FBA64F007DE151 /* JMSMainWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMSMainWindow.h; sourceTree = "<group>"; };
+		93C741EB17FBA64F007DE151 /* JMSMainWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMSMainWindow.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 				93C741C817FBA61C007DE151 /* JMSAppDelegate.h */,
 				93C741C917FBA61C007DE151 /* JMSAppDelegate.m */,
 				93C741CB17FBA61C007DE151 /* MainMenu.xib */,
+				93C741EA17FBA64F007DE151 /* JMSMainWindow.h */,
+				93C741EB17FBA64F007DE151 /* JMSMainWindow.m */,
 				93C741CE17FBA61C007DE151 /* Images.xcassets */,
 				93C741BD17FBA61C007DE151 /* Supporting Files */,
 			);
@@ -253,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93C741EC17FBA64F007DE151 /* JMSMainWindow.m in Sources */,
 				93C741C317FBA61C007DE151 /* main.m in Sources */,
 				93C741CA17FBA61C007DE151 /* JMSAppDelegate.m in Sources */,
 			);
