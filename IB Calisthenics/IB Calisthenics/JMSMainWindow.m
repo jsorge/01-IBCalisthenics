@@ -19,10 +19,12 @@
 #pragma mark - Segmented Control
 @property (weak) IBOutlet NSTextField *segmentedControlLabel;
 @property (strong, nonatomic)NSArray *segmentedControlArray;
+@property (weak) IBOutlet NSSegmentedControl *numberSegmentedControl;
 
 #pragma mark - Seasons Box
 @property (weak) IBOutlet NSTextField *seasonTextLabel;
 @property (strong, nonatomic)NSDictionary *seasonDictionary;
+@property (weak) IBOutlet NSMatrix *seasonsMatrix;
 
 #pragma mark - Date
 @property (weak) IBOutlet NSTextField *dateLabel;
@@ -47,6 +49,9 @@
 {
     [super awakeFromNib];
     [self changeSpeechSynthVoice:[self voicesToChoose]];
+    [self changeNumberToSquare:[self squareNumberSlider]];
+    [self changeSeason:[self seasonsMatrix]];
+    [self changeSegmentLabel:[self numberSegmentedControl]];
 }
 
 #pragma mark - Properties

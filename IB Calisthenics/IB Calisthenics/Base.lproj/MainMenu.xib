@@ -651,13 +651,13 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="323" y="217" width="828" height="569"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="900"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1178"/>
             <view key="contentView" id="372">
                 <rect key="frame" x="0.0" y="0.0" width="828" height="569"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jrL-xj-nmi">
-                        <rect key="frame" x="31" y="519" width="96" height="32"/>
+                        <rect key="frame" x="14" y="519" width="96" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="Hello" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kl2-un-whh">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -668,7 +668,7 @@
                         </connections>
                     </button>
                     <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jla-eW-RMm">
-                        <rect key="frame" x="136" y="519" width="96" height="32"/>
+                        <rect key="frame" x="124" y="519" width="96" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="push" title="Goodbye" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="1sa-Sx-SJZ">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -679,9 +679,9 @@
                         </connections>
                     </button>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mtz-2D-DVa">
-                        <rect key="frame" x="255" y="528" width="149" height="17"/>
+                        <rect key="frame" x="231" y="528" width="173" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="blj-d7-a1v">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Click one of these" id="blj-d7-a1v">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -876,7 +876,7 @@
                                     <real key="inspectorSampleValue" value="45"/>
                                 </metadata>
                             </numberFormatter>
-                            <font key="font" size="12" name="LucidaGrande"/>
+                            <font key="font" metaFont="cellTitle"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
@@ -948,7 +948,7 @@
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4vw-uf-rjK">
                         <rect key="frame" x="127" y="377" width="252" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="zgp-9e-pAe">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Click the &quot;Now&quot; button" id="zgp-9e-pAe">
                             <dateFormatter key="formatter" dateStyle="medium" timeStyle="medium" id="sHI-Bv-LGF"/>
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -978,8 +978,10 @@
             </view>
             <connections>
                 <outlet property="dateLabel" destination="4vw-uf-rjK" id="lc0-Yp-4eS"/>
+                <outlet property="numberSegmentedControl" destination="HN1-nb-Pyn" id="kgH-tZ-ebB"/>
                 <outlet property="numberToSquareLabel" destination="dU0-xY-7R2" id="LaP-Lb-mLm"/>
                 <outlet property="seasonTextLabel" destination="zLM-2z-bNa" id="IRX-gX-joE"/>
+                <outlet property="seasonsMatrix" destination="RmQ-Pj-wlG" id="O6k-OX-pX5"/>
                 <outlet property="segmentedControlLabel" destination="MIR-0P-g1f" id="0RW-ft-kPx"/>
                 <outlet property="shushButton" destination="tnV-eZ-kax" id="J2P-h2-7xf"/>
                 <outlet property="speechSynth" destination="CL8-vi-kY8" id="YFU-zi-g2W"/>
