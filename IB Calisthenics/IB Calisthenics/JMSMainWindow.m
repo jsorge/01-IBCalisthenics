@@ -22,6 +22,7 @@
 
 #pragma mark - Seasons Box
 @property (weak) IBOutlet NSTextField *seasonTextLabel;
+@property (strong, nonatomic)NSDictionary *seasonDictionary;
 
 #pragma mark - Date
 @property (weak) IBOutlet NSTextField *dateLabel;
@@ -65,6 +66,14 @@
     return _voicesDictionary;
 }
 
+- (NSDictionary *)seasonDictionary
+{
+    if (!_seasonDictionary) {
+        _seasonDictionary = @{@"Winter": @"December", @"Spring":@"March", @"Summer":@"June", @"Fall":@"September"};
+    }
+    return _seasonDictionary;
+}
+
 #pragma mark - Hello/Goodbye/Copy Buttons
 - (IBAction)helloButton:(id)sender
 {
@@ -97,7 +106,9 @@
 {
     if ([sender isKindOfClass:[NSMatrix class]]) {
         NSMatrix *seasonMatrix = sender;
-        [[self seasonTextLabel] setStringValue:[[seasonMatrix selectedCell] title]];
+        NSString *season = [[seasonMatrix selectedCell] title];
+        NSString *firstMonthOfSeason = [[self seasonDictionary] objectForKey:season];
+        [[self seasonTextLabel] setStringValue:firstMonthOfSeason];
     }
 }
 
