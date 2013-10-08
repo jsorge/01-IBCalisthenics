@@ -62,24 +62,20 @@
 }
 
 #pragma mark - Segmented Control
-- (IBAction)changeSegmentLabel:(id)sender
+- (IBAction)changeSegmentLabel:(NSSegmentedControl *)sender
 {
-    if ([sender isKindOfClass:[NSSegmentedControl class]]) {
-        NSSegmentedControl *segmentedControl = sender;
-        NSInteger segment = [segmentedControl selectedSegment];
-        [[self segmentedControlLabel] setStringValue:[[self segmentedControlArray] objectAtIndex:segment]];
-    }
+    NSSegmentedControl *segmentedControl = sender;
+    NSInteger segment = [segmentedControl selectedSegment];
+    [[self segmentedControlLabel] setStringValue:[[self segmentedControlArray] objectAtIndex:segment]];
 }
 
 #pragma mark - Seasons Box
-- (IBAction)changeSeason:(id)sender
+- (IBAction)changeSeason:(NSMatrix *)sender
 {
-    if ([sender isKindOfClass:[NSMatrix class]]) {
-        NSMatrix *seasonMatrix = sender;
-        NSString *season = [[seasonMatrix selectedCell] title];
-        NSString *firstMonthOfSeason = [[self seasonDictionary] objectForKey:season];
-        [[self seasonTextLabel] setStringValue:firstMonthOfSeason];
-    }
+    NSMatrix *seasonMatrix = sender;
+    NSString *season = [[seasonMatrix selectedCell] title];
+    NSString *firstMonthOfSeason = [[self seasonDictionary] objectForKey:season];
+    [[self seasonTextLabel] setStringValue:firstMonthOfSeason];
 }
 
 #pragma mark - Date
@@ -100,23 +96,19 @@
 }
 
 #pragma mark - Speech
-- (IBAction)changeSpeechSynthVoice:(id)sender
+- (IBAction)changeSpeechSynthVoice:(NSSegmentedControl *)sender
 {
-    if ([sender isKindOfClass:[NSSegmentedControl class]]) {
-        NSSegmentedControl *voices = sender;
-        NSString *voice = [voices labelForSegment:[voices selectedSegment]];
-        NSString *voiceName = [[self voicesDictionary] objectForKey:voice];
-        [[self speechSynth] setVoice:voiceName];
-    }
+    NSSegmentedControl *voices = sender;
+    NSString *voice = [voices labelForSegment:[voices selectedSegment]];
+    NSString *voiceName = [[self voicesDictionary] objectForKey:voice];
+    [[self speechSynth] setVoice:voiceName];
 }
 
-- (IBAction)changeSpeechSpeed:(id)sender
+- (IBAction)changeSpeechSpeed:(NSSlider *)sender
 {
-    if ([sender isKindOfClass:[NSSlider class]]) {
-        NSSlider *speedSlider = sender;
-        CGFloat wordsPerSecond = [speedSlider floatValue];
-        [[self speechSynth] setRate:wordsPerSecond];
-    }
+    NSSlider *speedSlider = sender;
+    CGFloat wordsPerSecond = [speedSlider floatValue];
+    [[self speechSynth] setRate:wordsPerSecond];
 }
 
 - (IBAction)speakButton:(id)sender
