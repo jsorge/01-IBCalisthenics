@@ -64,16 +64,14 @@
 #pragma mark - Segmented Control
 - (IBAction)changeSegmentLabel:(NSSegmentedControl *)sender
 {
-    NSSegmentedControl *segmentedControl = sender;
-    NSInteger segment = [segmentedControl selectedSegment];
+    NSInteger segment = [sender selectedSegment];
     [[self segmentedControlLabel] setStringValue:[[self segmentedControlArray] objectAtIndex:segment]];
 }
 
 #pragma mark - Seasons Box
 - (IBAction)changeSeason:(NSMatrix *)sender
 {
-    NSMatrix *seasonMatrix = sender;
-    NSString *season = [[seasonMatrix selectedCell] title];
+    NSString *season = [[sender selectedCell] title];
     NSString *firstMonthOfSeason = [[self seasonDictionary] objectForKey:season];
     [[self seasonTextLabel] setStringValue:firstMonthOfSeason];
 }
@@ -98,16 +96,14 @@
 #pragma mark - Speech
 - (IBAction)changeSpeechSynthVoice:(NSSegmentedControl *)sender
 {
-    NSSegmentedControl *voices = sender;
-    NSString *voice = [voices labelForSegment:[voices selectedSegment]];
+    NSString *voice = [sender labelForSegment:[sender selectedSegment]];
     NSString *voiceName = [[self voicesDictionary] objectForKey:voice];
     [[self speechSynth] setVoice:voiceName];
 }
 
 - (IBAction)changeSpeechSpeed:(NSSlider *)sender
 {
-    NSSlider *speedSlider = sender;
-    CGFloat wordsPerSecond = [speedSlider floatValue];
+    CGFloat wordsPerSecond = [sender floatValue];
     [[self speechSynth] setRate:wordsPerSecond];
 }
 
