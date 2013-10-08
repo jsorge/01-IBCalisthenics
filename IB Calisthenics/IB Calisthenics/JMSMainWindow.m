@@ -28,14 +28,6 @@
     return _segmentedControlArray;
 }
 
-- (NSDictionary *)voicesDictionary
-{
-    if (!_voicesDictionary) {
-        _voicesDictionary = @{@"Alex":@"com.apple.speech.synthesis.voice.Alex", @"Victoria":@"com.apple.speech.synthesis.voice.Victoria", @"Cellos":@"com.apple.speech.synthesis.voice.Cellos", @"Trinoids":@"com.apple.speech.synthesis.voice.Trinoids"};
-    }
-    return _voicesDictionary;
-}
-
 - (NSDictionary *)seasonDictionary
 {
     if (!_seasonDictionary) {
@@ -88,16 +80,19 @@
 {
     NSNumber *sliderValue = [NSNumber numberWithFloat:[[self squareNumberSlider] floatValue]];
     [[self numberToSquareLabel] setObjectValue:sliderValue];
-    sliderValue = [NSNumber numberWithFloat:([sliderValue floatValue] * [sliderValue floatValue])];
-    [[self squareNumberLabel] setObjectValue:sliderValue];
-    [[self squareFullTextLabel] setObjectValue:sliderValue];
+    
+    NSNumber *sliderSquared = [NSNumber numberWithFloat:([sliderValue floatValue] * [sliderValue floatValue])];
+    
+    [[self squareNumberLabel] setObjectValue:sliderSquared];
+    [[self squareFullTextLabel] setObjectValue:sliderSquared];
 }
 
 #pragma mark - Speech
 - (IBAction)changeSpeechSynthVoice:(NSSegmentedControl *)sender
 {
     NSString *voice = [sender labelForSegment:[sender selectedSegment]];
-    NSString *voiceName = [[self voicesDictionary] objectForKey:voice];
+    NSString *voiceName = [NSString stringWithFormat:@"com.apple.speech.synthesis.voice.%@", voice];
+    
     [[self speechSynth] setVoice:voiceName];
 }
 

@@ -34,7 +34,6 @@
 @property (weak) IBOutlet NSTextField *numberToSquareLabel;
 
 #pragma mark - Speech
-@property (strong, nonatomic)NSDictionary *voicesDictionary;
 @property (weak) IBOutlet NSSegmentedControl *voicesToChoose;
 @property (weak) IBOutlet NSTextField *textFieldToSpeak;
 @property (weak) IBOutlet NSButton *shushButton;
